@@ -140,7 +140,7 @@ CNNs attribute to the **angler**, not the fish. BagNet-33 correctly identifies t
 
 | ResNet-50 — focuses on angler ✗ | BagNet-33 — focuses on fish ✓ |
 |---|---|
-| ![Tench ResNet](images/tench_resnet.png) | ![Tench BagNet](images/tench_bagnet.png) |
+| ![Tench ResNet](images/heatmaps/tench_resnet.png) | ![Tench BagNet](images/heatmaps/tench_bagnet.png) |
 
 > Faithfulness: ResNet-50 GradCAM = 0.954 (angler) · BagNet-33 GradCAM = 0.952 (fish body)
 
@@ -152,7 +152,7 @@ ResNet-50 attributes to the **worker**; ViT-B16 IntGrad correctly attributes to 
 
 | ResNet-50 — worker (faith: 0.161) | ViT-B16 — blade (faith: 0.862) |
 |---|---|
-| ![Chain Saw ResNet](images/chainsaw_resnet.png) | ![Chain Saw ViT](images/chainsaw_vit.png) |
+| ![Chain Saw ResNet](images/heatmaps/chainsaw_resnet.png) | ![Chain Saw ViT](images/heatmaps/chainsaw_vit.png) |
 
 ---
 
@@ -160,7 +160,7 @@ ResNet-50 attributes to the **worker**; ViT-B16 IntGrad correctly attributes to 
 
 GradCAM and IntGrad both highlight the **"PLEASE PREPAY" sign**, not the pump structure. The model learned to identify gas pumps by signage, not mechanical form.
 
-![Gas Pump](images/gaspump_resnet.png)
+![Gas Pump](images/heatmaps/gaspump_resnet.png)
 
 > IntGrad faithfulness = 0.884 — correct explanation of wrong learning.
 
@@ -170,7 +170,7 @@ GradCAM and IntGrad both highlight the **"PLEASE PREPAY" sign**, not the pump st
 
 GradCAM produces a **uniform zero map** across all 20 test images on ViT-B16. This is a mathematical incompatibility — not a bug or tuning issue.
 
-![ViT GradCAM Failure](images/vit_gradcam_fail.png)
+![ViT GradCAM Failure](images/heatmaps/vit_gradcam_fail.png)
 
 > Sparsity = 0.000 · Stability = 0.000 · Sanity Pearson r = NaN
 
@@ -180,7 +180,7 @@ GradCAM produces a **uniform zero map** across all 20 test images on ViT-B16. Th
 
 All four methods converge on the **rear compactor mechanism** — the mechanically distinctive part of the vehicle.
 
-![Garbage Truck](images/garbage_resnet.png)
+![Garbage Truck](images/heatmaps/garbage_resnet.png)
 
 > Faithfulness = 0.951 · Sufficiency = 0.367 (highest in study)
 
